@@ -27,7 +27,11 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.use(cors());
+const corsOptions = {
+  origin: '*',
+}
+
+app.use(cors(corsOptions));
 
 app.get('/search-tweets', async (req, res) => {
   if (!req.query.q) {
