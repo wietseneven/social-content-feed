@@ -1,0 +1,12 @@
+{
+  "name": "social-content-feed",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "Wietse Neven <hello@wietseneven.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "twit": "^2.2.11"
+  }
+}
