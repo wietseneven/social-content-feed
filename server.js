@@ -1,6 +1,7 @@
 require('dotenv').config()
 const Twit = require('twit');
 const express = require('express')
+const cors = require('cors')
 const http = require('http');
 const app = express();
 const port = process.env.PORT || 3000;
@@ -25,6 +26,8 @@ const searchTweets = async (searchTerm) => {
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
+
+app.use(cors());
 
 app.get('/search-tweets', async (req, res) => {
   if (!req.query.q) {
